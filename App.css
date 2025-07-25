@@ -1,0 +1,91 @@
+/* Full reset and background */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Wrapper container */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Calculator box */
+.calculator {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 320px;
+}
+
+/* Display screen */
+.display {
+  background-color: #1e293b;
+  color: #ffffff;
+  text-align: right;
+  padding: 20px;
+  font-size: 32px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  height: 60px;
+  overflow-x: auto;
+}
+
+/* Grid buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Default button */
+button {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #a78bfa;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #8b5cf6;
+}
+
+/* Clear (C) button */
+button.clear {
+  background-color: #f87171;
+}
+button.clear:hover {
+  background-color: #ef4444;
+}
+
+/* Operator buttons */
+button.operator {
+  background-color: #38bdf8;
+}
+button.operator:hover {
+  background-color: #0ea5e9;
+}
+
+/* Equals (=) button */
+button.equals {
+  background-color: #f97316;
+  grid-column: span 2;
+}
+button.equals:hover {
+  background-color: #ea580c;
+}
